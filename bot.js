@@ -1,12 +1,20 @@
 import Discord from 'discord.js'
 import 'dotenv/config'
 
-console.log('👋 henlo')
-
 const bot = new Discord.Client()
 
 bot.on('ready', () => {
-  console.log('✅ running!')
+  console.log('👋 henlo')
+})
+
+bot.on('message', msg => {
+  if (msg.content.includes('vnrbot')) {
+    try {
+      msg.react(bot.emojis.find(emoji => emoji.name === 'tortuvnr'))
+    } catch(e) {
+      msg.react('👋')
+    }
+  }
 })
 
 bot.login(process.env.DISCORD_TOKEN)
