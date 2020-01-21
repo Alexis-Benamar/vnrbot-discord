@@ -7,9 +7,14 @@
   "author": "Alexis Benamar",
   "license": "MIT",
   "scripts": {
-    "start": "nodemon --exec babel-node bot.js"
+    "dev": "nodemon --exec babel-node ./src/bot.js",
+    "start": "node ./dist/bot.js",
+    "clean": "rm -rf ./dist && mkdir dist",
+    "build": "babel src -d dist",
+    "prod": "yarn run clean && yarn run build"
   },
   "devDependencies": {
+    "@babel/cli": "^7.8.3",
     "@babel/core": "^7.8.3",
     "@babel/node": "^7.8.3",
     "@babel/preset-env": "^7.8.3",
