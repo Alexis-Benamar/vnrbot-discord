@@ -10,15 +10,13 @@
     "dev": "nodemon --exec babel-node ./src/bot.js",
     "start": "cross-env NODE_ENV=production babel-node ./src/bot.js"
   },
-  "devDependencies": {
-    "dotenv": "^8.2.0",
-    "nodemon": "^2.0.2"
-  },
   "dependencies": {
     "@babel/core": "^7.8.3",
     "@babel/node": "^7.8.3",
     "@babel/preset-env": "^7.8.3",
     "cross-env": "^6.0.3",
-    "discord.js": "^11.5.1"
+    "discord.js": "^11.5.1",
+    "dotenv": "^8.2.0",
+    "nodemon": "^2.0.2"
   }
 }
