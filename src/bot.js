@@ -1,4 +1,3 @@
-import '@babel/polyfill'
 import Discord from 'discord.js'
 import dotenv from 'dotenv'
 
