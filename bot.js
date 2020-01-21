@@ -8,11 +8,23 @@ bot.on('ready', () => {
 })
 
 bot.on('message', msg => {
-  if (msg.content.includes('vnrbot')) {
+  let { content, author, channel} = msg
+  
+  //henlo
+  if (content.includes('vnrbot')) {
     try {
       msg.react(bot.emojis.find(emoji => emoji.name === 'tortuvnr'))
     } catch(e) {
       msg.react('👋')
+    }
+  }
+
+  //reply to mee6 bot
+  if (author.username === 'MEE6' && content.startsWith('GG')) {
+    try {
+      channel.send(`TG <@${author.id}> 👺`)
+    } catch(e) {
+      console.log(e)
     }
   }
 })
