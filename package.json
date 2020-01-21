@@ -1,0 +1,22 @@
+{
+  "name": "vnrbot-discord",
+  "version": "1.0.0",
+  "description": "an angry discord bot",
+  "main": "bot.js",
+  "repository": "git@github.com:Alexis-Benamar/vnrbot-discord.git",
+  "author": "Alexis Benamar",
+  "license": "MIT",
+  "scripts": {
+    "start": "nodemon --exec babel-node bot.js"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.8.3",
+    "@babel/node": "^7.8.3",
+    "@babel/preset-env": "^7.8.3",
+    "dotenv": "^8.2.0",
+    "nodemon": "^2.0.2"
+  },
+  "dependencies": {
+    "discord.js": "^11.5.1"
+  }
+}
