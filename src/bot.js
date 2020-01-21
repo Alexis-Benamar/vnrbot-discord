@@ -1,5 +1,7 @@
 import Discord from 'discord.js'
-import 'dotenv/config'
+import dotenv from 'dotenv'
+
+if (process.env.NODE_ENV !== 'production') dotenv.config()
 
 const bot = new Discord.Client()
 

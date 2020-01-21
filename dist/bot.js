@@ -2,10 +2,11 @@
 
 var _discord = _interopRequireDefault(require("discord.js"));
 
-require("dotenv/config");
+var _dotenv = _interopRequireDefault(require("dotenv"));
 
 function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { "default": obj }; }
 
+if (process.env.NODE_ENV !== 'production') _dotenv["default"].config();
 var bot = new _discord["default"].Client();
 bot.on('ready', function () {
   console.log('👋 henlo');
