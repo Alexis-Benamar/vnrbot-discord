@@ -1,7 +1,10 @@
+import '@babel/polyfill'
 import Discord from 'discord.js'
 import dotenv from 'dotenv'
 
-if (process.env.NODE_ENV !== 'production') dotenv.config()
+if (process.env.NODE_ENV !== 'production') {
+  dotenv.config()
+} 
 
 const bot = new Discord.Client()
 
