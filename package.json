@@ -7,8 +7,11 @@
   "author": "Alexis Benamar",
   "license": "MIT",
   "scripts": {
+    "build-babel": "babel -d ./build ./src -s",
+    "build": "yarn clean && yarn build-babel",
+    "clean": "rm -rf build && mkdir build",
     "dev": "nodemon --exec babel-node ./src/bot.js",
-    "start": "cross-env NODE_ENV=production babel-node ./src/bot.js"
+    "start": "yarn build && cross-env NODE_ENV=production node ./build/bot.js"
   },
   "dependencies": {
     "@babel/core": "^7.8.3",
@@ -18,5 +21,8 @@
     "discord.js": "^11.5.1",
     "dotenv": "^8.2.0",
     "nodemon": "^2.0.2"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.8.3"
   }
 }
