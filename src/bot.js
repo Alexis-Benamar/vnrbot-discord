@@ -15,7 +15,7 @@ bot.on('message', msg => {
   let { content, author, channel} = msg
   
   //henlo
-  if (content.includes('vnrbot')) {
+  if (RegExp(/\bvnrbot\b/i).test(content) || msg.isMemberMentioned(bot.user)) {
     try {
       msg.react(bot.emojis.find(emoji => emoji.name === 'tortuvnr'))
     } catch(e) {
