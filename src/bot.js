@@ -12,7 +12,7 @@ bot.on('ready', () => {
 })
 
 bot.on('message', msg => {
-  let { content, author, channel} = msg
+  let { content, author, channel } = msg
   
   //henlo
   if (RegExp(/\bvnrbot\b/i).test(content) || msg.isMemberMentioned(bot.user)) {
