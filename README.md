@@ -9,7 +9,7 @@ It is also a nice way for me to learn about discord bots. Does this actually fix
 
 Just clone the repo on your machine, then run:
 * `yarn` to download required dependencies
-* `yarn start` once the previous command has finished
+* `yarn dev` once the previous command has finished
 
 ---
 
